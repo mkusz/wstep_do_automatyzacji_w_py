@@ -1,0 +1,1 @@
+# wstep_do_automatyzacji_w_py
