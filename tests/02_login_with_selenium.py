@@ -1,0 +1,60 @@
+import time
+from pprint import pprint
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions
+
+
+WAIT_FOR_ELEMENT = 3
+USERNAME = 'admin'
+PASSWORD = 'default'
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--window-size=1024,768')
+chrome_options.add_argument('--disable-default-apps')
+chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+chrome_options.add_experimental_option('useAutomationExtension', False)
+prefs = {"credentials_enable_service": False,
+         "profile.password_manager_enabled" : False}
+chrome_options.add_experimental_option("prefs", prefs)
+driver = webdriver.Chrome(options=chrome_options)
+
+driver.get("http://0.0.0.0:5000/")
+time.sleep(1)
+
+blog_name_text = WebDriverWait(driver, WAIT_FOR_ELEMENT).until(
+    expected_conditions.text_to_be_present_in_element((By.XPATH, "//nav//h1"), "Blog for testing")
+)
+assert blog_name_text == True
+
+login_link = WebDriverWait(driver, WAIT_FOR_ELEMENT).until(
+    expected_conditions.element_to_be_clickable((By.XPATH, "//footer//li[2]/a")))
+login_link.click()
+time.sleep(1)
+
+login_text = WebDriverWait(driver, WAIT_FOR_ELEMENT).until(
+    expected_conditions.text_to_be_present_in_element((By.XPATH, "//main/h2"), "Login")
+)
+assert login_text == True
+
+login_user = WebDriverWait(driver, WAIT_FOR_ELEMENT).until(
+    expected_conditions.element_to_be_clickable((By.NAME, "username")))
+login_user.send_keys(USERNAME)
+time.sleep(1)
+
+login_password = WebDriverWait(driver, WAIT_FOR_ELEMENT).until(
+    expected_conditions.element_to_be_clickable((By.XPATH, "//input[@name='password']")))
+login_password.send_keys(PASSWORD)
+time.sleep(1)
+login_password.submit()
+
+login_text = WebDriverWait(driver, WAIT_FOR_ELEMENT).until(
+    expected_conditions.text_to_be_present_in_element((By.XPATH, "//footer//li[2]/a"), "New Content")
+)
+assert login_text == True
+
+pprint(driver.get_cookies())
+
+time.sleep(30)
+driver.close()
