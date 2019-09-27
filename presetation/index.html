@@ -1,0 +1,232 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Wstęp do automatyzacji w Python'ie by Maciej 'maQ' Kusz</title>
+
+    <meta name="author" content="Maciej 'maQ' Kusz" />
+
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+
+    <div id="impress" data-autoplay="0">
+        <div id="title" class="step slide center" data-x="0" data-y="-2000" data-z="0" data-scale="1">
+            <p>Wstęp do<br />automatyzacji w<br />Python'ie<br /><br />
+                <img src="pic/logo-BBQA.png" style="max-height: 120px">
+                <img src="pic/logo_sjsi.png" style="max-height: 128px">
+                <img src="pic/icon_128x128.png" style="max-height: 128px">
+                <br />
+                <span style="font-size: 24px;">by <strong>Maciej 'maQ' Kusz</strong></span>
+            </p>
+        </div>
+        <div id="agenda" class="step slide center" data-x="2000" data-y="-2000" data-z="0" data-scale="1" style="text-align: left">
+            <ul>
+               Agenda:
+                <li class="substep">Kim jest prowadzący?</li>
+                <li class="substep">Co to automatyzacja?</li>
+                <li class="substep">Jak się uczyć?</li>
+                <li class="substep">Co będzie potrzebne?</li>
+                <li class="substep">Proste przykłady testów</li>
+                <li class="substep">Co dalej?</li>
+                <li class="substep">Ograniczenia (?) Python'a</li>
+            </ul>
+        </div>
+        <div id="mr_right" class="step slide center" data-x="4000" data-y="-2000" data-z="0" data-scale="1">
+            <p>
+                <img src="pic/mr_right.jpg" style="max-height: 768px">
+            </p>
+        </div>
+        <div id="private" class="step slide center" data-x="6000" data-y="-2000" data-z="0" data-scale="1" style="text-align: left">
+            <ul>
+                Prywatnie:
+                <li class="substep">mąż i ojciec</li>
+                <li class="substep">wiek: 37 lat</li>
+                <li class="substep">mówca: PyCon '16, PySilesia '16 i '17, Up#19, ŚlonzaczQA#2</li>
+                <li class="substep">hobby: IoT i DIY<br /><img height="400px" src="pic/garden.jpg"></li>
+                <li class="substep">przyszłość: blog, podcast, ???</li>
+            </ul>
+        </div>
+        <div id="professional" class="step slide center" data-x="8000" data-y="-2000" data-z="0" data-scale="1" style="text-align: left">
+            <ul>
+                Zawodowo:
+                <li class="substep">tester od 11 lat</li>
+                <li class="substep">tester automatyczny od 6 lat (Python)</li>
+                <li class="substep">4 frameworki do testów na koncie</li>
+                <li class="substep">początki: Junior Quality Assuarance</li>
+                <li class="substep">aktualnie: Senior Python Developer</li>
+            </ul>
+        </div>
+        <div id="automation" class="step slide center small" data-x="0" data-y="-1000" data-z="0" data-scale="1">
+            <ul>
+                <li>
+                    Automatyzacja:<br />
+                    <span class="substep"><br />
+                        Znaczne ograniczenie lub zastąpienie ludzkiej pracy fizycznej i umysłowej przez
+                        pracę maszyn działających na zasadzie samoregulacji i wykonujących określone czynności
+                        bez udziału człowieka (czyli samoczynnych).
+                    </span>
+                    <br />&nbsp;
+                </li>
+                <li>
+                    <div class="substep">Zrobotyzowana Automatyzacja Procesów<br />
+                        <span style="font-size: 20px; font-weight: bold;">
+                            ang. Robotic Process Automation (RPA)
+                        </span>
+                    </div>
+                    <br />
+                    <span class="substep">
+                        Technologia automatyzacji powtarzalnych procesów biznesowych, z wykorzystaniem
+                        programów komputerowych – robotów symulujących pracę człowieka.
+                        [...] Roboty RPA są programowane do samodzielnego wykonywania działań,
+                        o różnym stopniu skomplikowania, które cechuje
+                        <strong>powtarzalność i ograniczona liczba wyjątków w regule algorytmu</strong>.
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div id="how_to_start" class="step slide center" data-x="2000" data-y="-1000" data-z="0" data-scale="1" style="text-align: left">
+            <ul>
+                Jak się uczyć?
+                <li class="substep">książki</li>
+                <li class="substep">własny projekt</li>
+                <li class="substep">kurs online</li>
+                <li class="substep">stackoverflow.com</li>
+                <li class="substep">google.com</li>
+            </ul>
+        </div>
+        <div id="what_is_needed" class="step slide center" data-x="4000" data-y="-1000" data-z="0" data-scale="1" style="text-align: left">
+            <ul>
+                Co będzie potrzebne?
+                <li class="substep">Python</li>
+                <li class="substep">IDE</li>
+                <li class="substep">Framework</li>
+                <li class="substep">Biblioteki</li>
+                <li class="substep">Dodatki</li>
+            </ul>
+        </div>
+        <div id="python" class="step slide center" data-x="6000" data-y="-1000" data-z="0" data-scale="1" style="text-align: left">
+            <ul>
+                Python:
+                <li class="substep">instalacja</li>
+                <li class="substep">virtualenv (venv)</li>
+                <li class="substep">pip</li>
+            </ul>
+        </div>
+        <div id="ide" class="step slide center" data-x="8000" data-y="-1000" data-z="0" data-scale="1" style="text-align: left">
+            <ul>
+                IDE:<br />
+                <span style="font-size: 20px; font-weight: bold;">
+                    ang. Integrated Development Environment
+                </span>
+                <li class="substep">notatnik + terminal</li>
+                <li class="substep">Eclipse</li>
+                <li class="substep">VSCode</li>
+                <li class="substep">PyCharm</li>
+            </ul>
+        </div>
+        <div id="framework" class="step slide center" data-x="0" data-y="0" data-z="0" data-scale="1" style="text-align: left">
+            <ul>
+                Framework:
+                <li class="substep">UnitTest</li>
+                <li class="substep">PyTest</li>
+                <li class="substep">Behave</li>
+                <li class="substep">Locust.io</li>
+            </ul>
+        </div>
+        <div id="libs" class="step slide center" data-x="2000" data-y="0" data-z="0" data-scale="1" style="text-align: left">
+            <ul>
+                Biblioteki:
+                <li class="substep">standardowe (np. html, time, datetime, random, urllib)</li>
+                <li class="substep">selenium</li>
+                <li class="substep">requests</li>
+                <li class="substep">mysql-connector, psycopg2, redis, kafka-python, itp.</li>
+                <li class="substep">faker</li>
+            </ul>
+        </div>
+        <div id="addons" class="step slide center" data-x="4000" data-y="0" data-z="0" data-scale="1" style="text-align: left">
+            <ul>
+                Dodatki:
+                <li class="substep">sphinx</li>
+                <li class="substep">invoke</li>
+                <li class="substep">allure</li>
+                <li class="substep">jenkins</li>
+                <li class="substep">opencv</li>
+            </ul>
+        </div>
+        <div id="test_example" class="step slide center" data-x="6000" data-y="0" data-z="0" data-scale="1" style="text-align: left">
+            <p>
+                Proste przykłady testów<br />
+                <span>czyli jak bym zaczął się uczyć Selenium</span>
+            </p>
+        </div>
+        <div id="what_next" class="step slide center" data-x="8000" data-y="0" data-z="0" data-scale="1" style="text-align: left">
+            <ul>
+                Co dalej?
+                <li class="substep">Obiektowość w Pythonie</li>
+                <li class="substep">Type Hinting</li>
+                <li class="substep">Dekoratory</li>
+                <li class="substep">Page Object Pattern</li>
+                <li class="substep">Borg</li>
+                <li class="substep">Multiprocessing</li>
+            </ul>
+        </div>
+        <div id="python_limitations" class="step slide center" data-x="0" data-y="1000" data-z="0" data-scale="1" style="text-align: left">
+            <ul>
+                <li>Ograniczenia (?) Python'a<br />
+                    <span style="font-size: 20px; font-weight: bold;">i jak sobie z nimi poradzić</span>
+                </li>
+                <li class="substep">szybkość</li>
+                <li class="substep">brak typowania</li>
+                <li class="substep">GIL (Global Interpreter Lock)</li>
+                <li class="substep">???</li>
+            </ul>
+        </div>
+        <div id="usage_examples" class="step slide center" data-x="2000" data-y="1000" data-z="0" data-scale="1" style="text-align: left">
+            <p>
+                <img src="pic/testbed.jpg" style="max-height: 768px">
+            </p>
+        </div>
+        <div id="interview_test" class="step slide center" data-x="4000" data-y="1000" data-z="0" data-scale="1">
+            <p>Jak to przetestować?<br />
+                <img class="substep" src="pic/rc.webp" style="max-height: 768px">
+            </p>
+        </div>
+
+        <div id="questions" class="step slide center" data-x="6000" data-y="1000" data-z="0" data-scale="1">
+            <p style="font-size: 400px;">
+                ?
+            </p>
+        </div>
+        <div id="thx" class="step slide center" data-x="8000" data-y="1000" data-z="0" data-scale="1">
+            <p style="font-size: 250px;">
+                Thx
+            </p>
+        </div>
+        <div id="overview" class="step" data-x="4000" data-y="-500" data-z="0" data-scale="5">
+        </div>
+</div>
+<!--
+    This is a UI plugin. You can read more about plugins in src/plugins/README.md.
+    For now, I'll just tell you that this adds some graphical controls to navigate the
+    presentation. In the CSS file you can style them as you want. We've put them bottom right.
+-->
+<div id="impress-toolbar"></div>
+
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Swipe left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>

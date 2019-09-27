@@ -1,0 +1,99 @@
+body {
+    background-image: url("../pic/background.jpg");
+    background-position: center;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+.fallback-message p {
+    margin-bottom: 10px;
+}
+.impress-supported .fallback-message {
+    display: none;
+}
+div#impress-toolbar {
+    position: fixed;
+    right: 1px;
+    bottom: 1px;
+    opacity: 0.6;
+    border: none;
+}
+div#impress-toolbar > span {
+    margin-right: 10px;
+}
+div#impress-toolbar #impress-autoplay-playpause {
+    display: none;
+}
+.slide {
+    width: 1200px;
+    height: 1000px;
+}
+.substep {
+    opacity: 0;
+}
+.substep.substep-visible {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+ul {
+    font-size: 64px;
+    font-weight: bold;
+}
+li {
+    text-align: justify;
+    list-style-type: none;
+}
+li span, li.substep {
+    font-size: 48px;
+    font-weight: normal;
+}
+li.substep {
+    list-style-type: disc;
+}
+.small ul {
+    font-size: 48px;
+    font-weight: bold;
+}
+.small li span, .small li.substep {
+    font-size: 32px;
+    font-weight: normal;
+}
+p {
+    font-size: 90px;
+}
+p span {
+    font-size: 24px;
+}
+
+div.past svg {
+    opacity: 0.5;
+}
+.future svg {
+    display: none;
+}
+.present svg {
+    display: inline;
+}
+.center {
+    top: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .slide.present {
+    border: #000000 solid 2px;
+} */
