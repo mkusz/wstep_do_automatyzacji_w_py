@@ -1,5 +1,4 @@
 import unittest
-import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -9,6 +8,7 @@ from http import HTTPStatus
 
 
 class SimpleLogin(unittest.TestCase):
+    # Constants
     URL = "http://0.0.0.0:5000/"
     WAIT_FOR_ELEMENT = 3
     USERNAME = 'admin'
@@ -52,7 +52,7 @@ class SimpleLogin(unittest.TestCase):
         self.assertTrue(self.wait_to_be_clickable("//footer//a[contains(text(), 'New Content')]"))
 
     # =================================================================================================================
-    # Tests
+    # Tests (each function with name started with 'test_'
     # =================================================================================================================
 
     def test_open_page(self):

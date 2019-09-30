@@ -7,10 +7,13 @@ import requests
 from http import HTTPStatus
 
 
+# Constants
+URL = "http://0.0.0.0:5000/"
 WAIT_FOR_ELEMENT = 3
 USERNAME = 'admin'
 PASSWORD = 'default'
 
+# Initialize chrome webdriver
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--window-size=1024,768')
 chrome_options.add_argument('--disable-default-apps')
@@ -21,32 +24,37 @@ prefs = {"credentials_enable_service": False,
 chrome_options.add_experimental_option("prefs", prefs)
 driver = webdriver.Chrome(options=chrome_options)
 
-driver.get("http://0.0.0.0:5000/")
-time.sleep(1)
+# Open web page
+driver.get(URL)
+time.sleep(3)
 
-response = requests.post(url='http://0.0.0.0:5000/login',
+# Send request to web server to mimic login page form submission
+response = requests.post(url=f"{URL}login",
                          data={'username': USERNAME,
                                'password': PASSWORD},
                          allow_redirects=False
                          )
 
+# Verify response status code
 assert response.status_code == HTTPStatus.FOUND
 
-session_key = response.cookies['session']
-
-
+# Add cookie with session token to web browser
 driver.add_cookie({'domain': '0.0.0.0',
                    'httpOnly': True,
                    'name': 'session',
                    'path': '/',
                    'secure': False,
-                   'value': session_key})
+                   'value': response.cookies['session']})
 
-driver.get("http://0.0.0.0:5000/")
-time.sleep(1)
+# Open web page
+driver.get(URL)
+time.sleep(10)
 
+# Check for new web page element to confirm that user has been logged in
 login_text = WebDriverWait(driver, WAIT_FOR_ELEMENT).until(
     expected_conditions.text_to_be_present_in_element((By.XPATH, "//footer//li[2]/a"), "New Content")
 )
 assert login_text == True
+
+# Close webdriver
 driver.close()
