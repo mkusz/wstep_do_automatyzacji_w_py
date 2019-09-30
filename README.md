@@ -20,4 +20,6 @@ W repozytorium znajdują się 3 foldery:
   
  Od tego momentu można uruchamiać testy z folderu *tests*.
  
- PS. Kod przygotowany i przetestowany w Python 3.6 oraz w środowisku Linux (powinien działać również na MacOSX oraz Linux). Powyższy kod powstał tylko i wyłącznie w celach prezentacyjnych i niekomercyjnych. Nie ponoszę jakiejkolwiek odpowiedzialności za jego działanie.
+ PS. Kod przygotowany i przetestowany w Python 3.6 oraz w środowisku Linux (powinien działać również na MacOSX oraz Windows).
+ Powyższy kod powstał tylko i wyłącznie w celach prezentacyjnych i niekomercyjnych.
+ Nie ponoszę jakiejkolwiek odpowiedzialności za jego działanie.
